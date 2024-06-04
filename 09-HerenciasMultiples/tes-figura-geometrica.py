@@ -9,3 +9,4 @@ print(cuadrado1.calcular_area())
 
 #MRO -method Resolution Order
 
+print(cuadrado.mro())
