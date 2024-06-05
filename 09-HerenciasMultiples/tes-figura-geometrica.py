@@ -1,12 +1,15 @@
 from cuadrado import *
+from rectangulo import *
 
-cuadrado1 = cuadrado(5,'verde')
-print(cuadrado1.ancho)
-print(cuadrado1.alto)
-print(cuadrado1.color)
-print(cuadrado1.calcular_area())
-
-
+cuadrado1 = cuadrado(lado =5,color ='Rojo')
+cuadrado1.alto = -10
 #MRO -method Resolution Order
+# print(cuadrado.mro())
+print(f'Calculo area cuadrado: {cuadrado1.calcular_area()}')
+print(cuadrado1)
 
-print(cuadrado.mro())
+rectangulo1= Rectangulo(ancho=9, alto=8 ,color='verde')
+rectangulo1.ancho = 15
+
+print(f'Calculo de area rectangulo: {rectangulo1.calcular_area()}')
+print(rectangulo1)
