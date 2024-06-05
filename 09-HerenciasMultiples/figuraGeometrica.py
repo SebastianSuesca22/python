@@ -1,4 +1,8 @@
-class figuraGeometrica:
+#ABC  =abstract base class
+from abc import ABC, abstractmethod
+
+class figuraGeometrica(ABC):
+
     def __init__(self, ancho, alto):
         if self._validar_valor(ancho):
             self._ancho = ancho
@@ -31,6 +35,11 @@ class figuraGeometrica:
             self._alto = alto
         else:
             print(f'Valor erroneo de alto: {alto}')
+    
+    @abstractmethod
+    def calcular_area(self):
+        pass
+
 
     def __str__(self) -> str:
         return f'FiguraGometrica [Ancho: {self._ancho}, Alto: {self.alto}]'
