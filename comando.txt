@@ -1,0 +1,20 @@
+CREAR UN VIRTUAL ENV
+python -m venv env
+virtualenv myenv
+
+
+
+CREAR UN PROYECTO DJANGO
+python -m django startproject sap =0 nombre del proyecto
+django-admin startproject sap
+
+
+CREAR UNA APP
+python manage.py startapp webapp
+ 
+LEVANTAR SERVIDOR
+python manage.py runserver
+
+REALIZAR CAMBIOS DE MODELS
+python manage.py makemigrates
+python manage.py migrate

@@ -1,0 +1,45 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet"  href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1 class="parrafo">Sistema de administracion de personas (SAP) </h1>
+    <div >
+        <i class="perso nas-count">Numero de personas:</i>{{no_personas}}
+    </div>
+    <div><a href="nueva_persona/">Agregar una persona</a></div>
+    <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>email</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in personas %}
+                    <tr>
+                        <td>{{persona.id}}  </td>
+                        <td>{{persona.nombre}} {{persona.apellido}}</td>
+                        <td>{{persona.email}} </td>
+                        <td><a href="detalle_persona/{{persona.id}}"> ver detalle</a></td>
+                        <td><a href="editar_persona/{{persona.id}}">editar</a></td>
+                        <td><a href="eliminar_persona/{{persona.id}}">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+    <div><a href="direccion/">Ir a las direcciones</a></div>
+</body>
+</html>
